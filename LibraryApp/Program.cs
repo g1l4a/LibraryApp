@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<LibraryContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryContext")));
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
     // Configure Identity options here
